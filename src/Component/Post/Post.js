@@ -29,8 +29,8 @@ function Post(props) {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image=""
-          title=""
+          image={props.image}
+          title="somev image"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">

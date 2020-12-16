@@ -5,4 +5,37 @@
     margin-bottom: 20px;
     padding: 30px 50px;
     margin: 20px 0;
+    width: fit-content;
   }
+
+  img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.blog_inner_wrapper.blog_image_wrapper img {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+}
+.blog_img_col img {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+.blog_img_col img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+    width: 300px;
+}
+img {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+}
