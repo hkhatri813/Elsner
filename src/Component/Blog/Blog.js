@@ -91,7 +91,7 @@ class Blog extends React.Component {
         }
 
         return (
-            <div>
+            <div className="container"> 
                 <h2 className="text-monospace text-center my-5" > Read about latest trends and updates about new technologies and tools </h2>
                 {this.state.latest && <div className="row mx-2 my-5"> 
                    <div className="col-md-5">
@@ -119,7 +119,7 @@ class Blog extends React.Component {
                     padding: "30px 50px",
                     margin: "20px 0"
                 }}> <Spin /> </div>}
-                {this.state.showMore && <div className="text-center"><button className="btn btn-primary" onClick={loadMore}> Load More </button></div>}
+                {this.state.showMore && <div className="text-center"><button className="btn btn-primary" onClick={loadMore}> View More </button></div>}
             </div>
         );
     }

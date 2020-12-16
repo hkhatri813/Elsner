@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     maxWidth: 345,
   },
   media: {
-    height: 140,
+    height: 200,
   },
 });
 
@@ -25,33 +25,32 @@ function Post(props) {
   // console.log(moment(date).format("MMMM DD,YYYY"));
  
   return (
-    <Card className={classes.root} style={{margin: "10px"}} onClick={props.clicked}>
+    <Card className={classes.root} style={{margin: "10px" ,width:"350px",height:"400px"}} onClick={props.clicked}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
           image={props.image}
-          title="somev image"
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+        <CardContent  width="350px" height="350px">
+          <Typography gutterBottom variant="h5" component="h6">
             {props.title}
           </Typography>
-          {/* <Typography variant="body2" color="textSecondary" component="p">
-            
-          </Typography> */}
+          <Typography variant="body2" color="textSecondary" component="p">
+          {moment(date).format("MMMM DD, YYYY")}
+          </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         {/* <Button size="small" color="primary">
           
         </Button> */}
-          <Typography variant="body2" color="textSecondary" component="p">
+          {/* <Typography variant="body2" color="textSecondary" component="p">
           {moment(date).format("MMMM DD, YYYY")}
-            </Typography> 
+            </Typography>  */}
 
-        <Button size="small" color="primary">
+        {/* <Button size="small" color="primary">
           
-        </Button>
+        </Button> */}
       </CardActions>
     </Card>
   );

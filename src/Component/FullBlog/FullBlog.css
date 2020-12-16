@@ -39,3 +39,59 @@ img {
     width: auto;
     max-width: 100%;
 }
+table {
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    min-width: 100%;
+    width: 100%;
+    display: table;
+}
+.blog_wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.blog_inner_wrapper {
+    max-width: 930px;
+    margin: 0 auto;
+}
+@media (min-width: 1200px)
+{.container {
+    max-width: 1140px;
+}}
+@media (min-width: 992px)
+{.container {
+    max-width: 960px;
+}}
+@media (min-width: 768px)
+{.container {
+    max-width: 720px;
+}}
+@media (min-width: 576px)
+{.container {
+    max-width: 540px;
+}}
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+table{
+    margin: 0;
+    max-width: 850px;
+    
+}
+.wptb-table-container table td {
+     width: 100px; 
+    box-sizing: content-box;
+    padding: 10px;
+    background-color: inherit;
+    vertical-align: middle;
+}
+.blog_inner_wrapper table td {
+    padding: 20px;
+    border: 1px solid;
+}
