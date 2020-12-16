@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import axios from "axios"
 import Post from "../Post/Post"
+import moment from "moment"
 import { slice, concat } from "lodash"
 import FullBlog from "../FullBlog/FullBog"
 import { Route } from "react-router-dom"
@@ -16,12 +17,13 @@ class Blog extends React.Component {
         index: 3,
         LENGTH: 0,
         page: 0,
-        round: 0
+        round: 0,
+        latest: null
     }
     componentDidMount() {
         axios.get("https://staging.elsner.com/wp-json/wp/v2/posts?_embed")
             .then(response => {
-                this.setState({ data: response.data, LENGTH: response.data.length, list: slice(response.data, 0, 3), showMore: true, page: Math.ceil(response.data.length / this.state.index) - 1 })
+                this.setState({ data: response.data, LENGTH: response.data.length, list: slice(response.data, 0, 3), showMore: true, page: Math.ceil(response.data.length / this.state.index) - 1 , latest: response.data[0] })
                 console.log(this.state.page);
                 this.setState(prevState => ({ round: prevState.round + 1 }))
                 console.log(this.state.data);
@@ -40,6 +42,8 @@ class Blog extends React.Component {
     //     this.setState(prevState=>({page:prevState.page-1}))
     //  }    
     render() {
+        
+
 
 
         const handlerViewMore = () => {
@@ -88,7 +92,22 @@ class Blog extends React.Component {
 
         return (
             <div>
-                <h4 className="text-monospace text-center my-5" > Read about latest trends and updates about new technologies and tools </h4>
+                <h2 className="text-monospace text-center my-5" > Read about latest trends and updates about new technologies and tools </h2>
+                {this.state.latest && <div className="row mx-2 my-5"> 
+                   <div className="col-md-5">
+                       <h4 className="font-weight-bold">{this.state.latest.title.rendered}</h4>
+                       <p>{moment(this.state.latest.date.substring(0,10)).format("MMMM DD, YYYY")}</p>
+                       <div className="multi-line-truncate" dangerouslySetInnerHTML={{ __html: this.state.latest?.content?.rendered }}></div> 
+                       <div className="my-4"> <a className="text-prmary text-underline " onClick={()=> blogSelectedHandler(this.state.latest.id)}> READ MORE </a> </div>
+                    
+                   </div>
+                    {/* <div className="col-md-1"></div> */}
+                   <div className="col-md-6">
+                       <img src={this.state.latest._embedded['wp:featuredmedia']['0'].source_url}  />
+                   </div>
+
+
+             </div>}
                 {this.state.list !== null ? <div className="row">
                     {this.state.list.map(post => <div className="col-md-4" key={post.id}> <Post title={post.title.rendered} date={post.date} image={post._embedded['wp:featuredmedia']['0'].source_url} clicked={() => blogSelectedHandler(post.id)} /> </div>)}
                 </div> : <div style={{

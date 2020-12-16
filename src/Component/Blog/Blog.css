@@ -6,3 +6,9 @@
   padding: 30px 50px;
   margin: 20px 0;
 } */
+.multi-line-truncate {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8;
+  overflow: hidden;
+}
