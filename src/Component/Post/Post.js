@@ -19,7 +19,7 @@ const useStyles = makeStyles({
 
 function Post(props) {
   const classes = useStyles();
-  // var date= props?.date.substring(0,10);
+  var date= props.date.substring(0,10);
   
   // console.log(moment(date).format("MMMM DD,YYYY"));
  
@@ -38,7 +38,7 @@ function Post(props) {
         </CardContent>
         <CardContent height="50px" Align="bottom">
         <Typography variant="body2" color="textSecondary" >
-        <img src="https://staging.elsner.com/wp-content/uploads/2020/07/calendar.png" alt=""/>{moment(props?.date.substring(0,10)).format("MMMM DD, YYYY")}
+        <img src="https://staging.elsner.com/wp-content/uploads/2020/07/calendar.png" alt=""/>{moment(date).format("MMMM DD, YYYY")}
         </Typography>
         </CardContent>
       
