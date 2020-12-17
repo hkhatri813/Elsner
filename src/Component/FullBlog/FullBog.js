@@ -56,7 +56,7 @@ class FullBlog extends React.Component{
                  <h4>Search Result for:</h4>
                  <form className="form-group" onSubmit={()=> console.log("submit")}>
                  <input type="text" placeholder="Search Blog" />
-                 <button  type="submit" className="btn btn-primary btn-large">Serach</button>
+                 <button  type="submit" className="btn btn-primary btn-large">Search</button>
              </form>
                  </div>
                  <div className="form-group col-md-6">
@@ -72,8 +72,8 @@ class FullBlog extends React.Component{
              
 
 
-        <h4 className="text-monospace text-center mt-5"> {this.state.singlePost?.title?.rendered} </h4>
-        <p className="text-center"> -{moment(this.state.singlePost?.date.substring(0,10)).format("MMMM DD, YYYY")}</p>
+        <h1 className="text-center mt-5"> {this.state.singlePost?.title?.rendered} </h1>
+        {/* <p className="text-center"> -{moment(this.state.singlePost?.date.substring(0,10)).format("MMMM DD, YYYY")}</p> */}
         <div className="row justify-content-md-center"><div className="col-md-6">
         <img src={this.state.singlePost._embedded['wp:featuredmedia']['0'].source_url} />
             </div></div>

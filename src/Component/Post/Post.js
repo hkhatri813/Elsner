@@ -20,7 +20,7 @@ const useStyles = makeStyles({
 
 function Post(props) {
   const classes = useStyles();
-  var date= props.date.substring(0,10);
+  // var date= props?.date.substring(0,10);
   
   // console.log(moment(date).format("MMMM DD,YYYY"));
  
@@ -36,7 +36,7 @@ function Post(props) {
             {props.title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-          {moment(date).format("MMMM DD, YYYY")}
+          {moment(props.date.substring(0,10)).format("MMMM DD, YYYY")}
           </Typography>
         </CardContent>
       </CardActionArea>
