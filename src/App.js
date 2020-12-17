@@ -5,6 +5,8 @@ import { Switch, Route, withRouter } from "react-router-dom";
 import Blog from "./Component/Blog/Blog"
 import FullBlog from "./Component/FullBlog/FullBog"
 import { Affix } from 'antd';
+import Catagory from "./Component/Catagory/Catagory";
+
 
 function App(props) {
   return (
@@ -15,7 +17,7 @@ function App(props) {
       <Switch>
         <Route path="/blog" exact component={Blog} />
         <Route path={'/blog/:id'} exact component={FullBlog} />
-
+        <Route path={'/catagory/:catagoryid'} exact component ={Catagory} />
         {/* <Route path="/" component={App} /> */}
       </Switch>
 
