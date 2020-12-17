@@ -11,7 +11,7 @@ class Header extends Component{
   <div className="custom-class">
     <div className="site_logo">
       <a href="">
-        <img className="original-logo lazyloaded" src="https://www.elsner.com/wp-content/uploads/2020/05/elsner_logo_2020.svg" alt width={159} data-lazy-src="https://www.elsner.com/wp-content/uploads/2020/05/elsner_logo_2020.svg" data-was-processed="true" />
+        <img className="original-logo lazyloaded" src="https://www.elsner.com/wp-content/uploads/2020/05/elsner_logo_2020.svg" alt width={159} data-lazy-src="https://www.elsner.com/wp-content/uploads/2020/05/elsner_logo_2020.svg" data-was-processed="true" style={{marginRight:"150px"}}/>
         {/* <noscript>&lt;img class="original-logo" src="https://www.elsner.com/wp-content/uploads/2020/05/elsner_logo_2020.svg" alt="" width="159" /&gt;</noscript> */}
         {/* <img className="sticky-logo lazyloaded" src="https://www.elsner.com/wp-content/uploads/2020/05/elsner_logo_2020.svg" alt width={159} data-lazy-src="https://www.elsner.com/wp-content/uploads/2020/05/elsner_logo_2020.svg" data-was-processed="true" /> */}
         {/* <noscript>&lt;img class="sticky-logo" src="https://www.elsner.com/wp-content/uploads/2020/05/elsner_logo_2020.svg" alt="" width="159" /&gt;</noscript> */}
@@ -167,17 +167,20 @@ class Header extends Component{
           <li id="menu-item-20609" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-20609"><Link to="/blog"><span className="screen-reader-text">Blog</span></Link></li>
           <li id="menu-item-20642" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-20642"><a href=""><span className="screen-reader-text">Career</span></a></li>
           <li id="menu-item-18528" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-18528"><a href=""><span className="screen-reader-text">Store</span></a></li>
+        
         </ul>
+       
       </div>
-      <div className="Cta-menu">
-        {/* <div className="Cta-section"> <a className="btn btn-primary" href="https://www.elsner.com/contact-us/" title="cta button">Contact Us</a></div> */}
-        {/* <Button type="primary">Contact Us</Button> */}
-      </div>
-      <div className="menumob">
-        <div className="hamburger"> <span /> <span /> <span /> <span /></div>
-        <nav className="main-nav" />
-      </div>
+      
+     
+      
     </div>
+    <div className="right-header">
+        <div className="Cta-menu">
+         <div className="Cta-section"> <a className="btn btn-primary" href="https://www.elsner.com/contact-us/" title="cta button">Contact Us</a></div>
+         
+        </div>
+      </div>
   </div>
 </header>
 

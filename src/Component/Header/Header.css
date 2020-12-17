@@ -181,15 +181,6 @@ header#header.sticky .sticky-logo {
 	float: right;
 	padding: 12px 0
 }
-eader#header .right-header {
-	float: none;
-	padding: 0;
-	width: 100%;
-	text-align: right;
-	display: flex;
-	align-items: center;
-	justify-content: flex-end
-}
 
 header#header .right-header ul.menu li a {
 	color: #0b0c0c;
@@ -252,4 +243,99 @@ header#header .right-header ul.menu li a:focus {
 }
 .custom-menu ul.menu {
 	margin: 0!important
+}
+.Cta-section {
+    margin-left: 30px;
+}
+
+.right-header {
+    float: right;
+    padding: 12px 0;
+}
+.Cta-section .btn.btn-primary {
+    font-size: 14px;
+    padding: 11px 20px;
+}
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+.btn.btn-primary {
+    background: #389ddb;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0 30px;
+    letter-spacing: 1px;
+    border: 1px solid #389ddb;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-primary {
+    color: #fff;
+    background: #ff055a;
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    color: #fff;
+    transition: all .2s cubic-bezier(.55, .085, .68, .53);
+    will-change:background-color;
+    border: 1px solid transparent;
+}
+header#header {
+    position: fixed;
+    top: 0;
+    background: #fff;
+    z-index: 999;
+    padding-top: 30px;
+   
+    transition: 0.4s ease-out;
+}
+header.covid-strip {
+    position: relative !important;
+    padding: 20px 50px;
+    display: inline-block;
+}
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.container-fluid {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
 }

@@ -1,10 +1,10 @@
-import React, { Component } from "react"
+import React from "react"
 import axios from "axios"
 import Post from "../Post/Post"
 import moment from "moment"
 import { slice, concat } from "lodash"
-import FullBlog from "../FullBlog/FullBog"
-import { Route } from "react-router-dom"
+// import FullBlog from "../FullBlog/FullBog"
+// import { Route } from "react-router-dom"
 import { Spin } from 'antd';
 import 'antd/dist/antd.css';
 import "./Blog.css"
@@ -92,11 +92,11 @@ class Blog extends React.Component {
 
         return (
             <div className="container"> 
-                <h2 className="text-monospace text-center my-5" > Read about latest trends and updates about new technologies and tools </h2>
+                <h1 className="text-monospace text-center my-5" > Read about latest trends and updates about new technologies and tools </h1>
                 {this.state.latest && <div className="row mx-2 my-5"> 
                    <div className="col-md-5">
                        <h4 className="font-weight-bold">{this.state.latest.title.rendered}</h4>
-                       <p>{moment(this.state.latest.date.substring(0,10)).format("MMMM DD, YYYY")}</p>
+                       <div className="date_time"><img src="https://staging.elsner.com/wp-content/uploads/2020/07/calendar.png"/>{moment(this.state.latest.date.substring(0,10)).format("MMMM DD, YYYY")}</div>
                        <div className="multi-line-truncate" dangerouslySetInnerHTML={{ __html: this.state.latest?.content?.rendered }}></div> 
                        <div className="my-4"> <a className="text-prmary text-underline " onClick={()=> blogSelectedHandler(this.state.latest.id)}> READ MORE </a> </div>
                     
@@ -119,7 +119,7 @@ class Blog extends React.Component {
                     padding: "30px 50px",
                     margin: "20px 0"
                 }}> <Spin /> </div>}
-                {this.state.showMore && <div className="text-center"><button className="btn btn-primary" onClick={loadMore}> View More </button></div>}
+                {this.state.showMore && <div className="text-center"><button className="btn btn-primary" style={{margin:"20px",padding:10,marginBottom:50}} onClick={loadMore}> View More </button></div>}
             </div>
         );
     }

@@ -115,3 +115,36 @@ list-style: none;
 text-align: left;
 background: #fff;
 }
+
+ul.alm-listing.alm-ajax.row .col-md-4 {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.blog_multi .col-md-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+}
+@media (min-width: 768px)
+{.col-md-4 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 33.333333%;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}}
+.blog-text h2 {
+  font-size: 25px;
+  color: #2f2f2f;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.date_time {
+  margin-bottom: 25px;
+}
+.blog-content .date_time {
+  margin: 25px 0;
+  font-size: 14px;
+}

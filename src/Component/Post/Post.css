@@ -1,0 +1,49 @@
+.blog-content .date_time {
+    margin: 25px 0;
+    font-size: 14px;
+}
+.blog-tab .blog-content {
+    padding: 20px 25px 0;
+}
+.blog-content {
+    padding: 20px 25px 65px;
+}
+blog-tab .blog-post {
+    -webkit-box-shadow: 0 0px 12px rgba(0,0,0,0.12);
+    box-shadow: 0 0px 12px rgba(0,0,0,0.12);
+}
+.blog-post {
+    text-align: left;
+    background: #fff;
+}
+ul.alm-listing.alm-ajax.row .col-md-4 {
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.blog_multi .col-md-4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 40px;
+}
+@media (min-width: 768px)
+{.col-md-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}}
+
+
+.our--blog section.banner.servicebanner h1 {
+    text-align: center;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 45px;
+    margin-bottom: 30px;
+    font-weight: 300;
+    color: #080909;
+}
